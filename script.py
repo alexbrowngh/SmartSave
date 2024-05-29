@@ -57,7 +57,7 @@ def input_modifier(string):
     myprompt=string
     
     # Support commenting out some lines.
-    string = re.sub(r'(?m)^!@#.*\n?', '', string)
+    string = re.sub(r'(?m)^\s*!@#.*\n?', '', string)
     
     # Remove trailing new lines.
     string = string.rstrip()
